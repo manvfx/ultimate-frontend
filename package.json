@@ -1,0 +1,53 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "nuxt build",
+    "serve": "nuxt dev --port 8080",
+    "lint": "exit 0",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "start": "node .output/server/index.mjs"
+  },
+  "devDependencies": {
+    "nuxt": "^3.14.1592",
+    "sass": "1.77.8",
+    "vite-plugin-vuetify": "2.0.4"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "38.0.1",
+    "@ckeditor/ckeditor5-vue": "5.1.0",
+    "@mdi/font": "7.4.47",
+    "@neshan-maps-platform/ol": "^1.0.5",
+    "@neshan-maps-platform/vue3-openlayers": "^2.0.1",
+    "@vue-leaflet/vue-leaflet": "0.9.0",
+    "@vueuse/core": "11.0.3",
+    "@vueuse/router": "11.0.3",
+    "cross-env": "7.0.3",
+    "d3": "^7.9.0",
+    "dayjs": "1.11.7",
+    "dom-to-image-more": "3.1.6",
+    "echarts": "^5.4.3",
+    "gauge-chart": "1.0.0",
+    "heic2any": "^0.0.4",
+    "highcharts": "^11.1.0",
+    "highcharts-vue": "^1.4.2",
+    "html5-qrcode": "2.3.8",
+    "jalaliday": "2.3.0",
+    "jspdf": "2.5.1",
+    "leaflet": "1.9.4",
+    "lodash": "4.17.21",
+    "moment-jalaali": "^0.10.1",
+    "pluralize": "8.0.0",
+    "radash": "10.8.1",
+    "ua-parser-js": "1.0.35",
+    "unified-form": "0.10.0",
+    "unified-form-vuetify": "0.6.10",
+    "unified-network": "0.6.4",
+    "vue-echarts": "^6.6.8",
+    "vue3-persian-datetime-picker": "1.2.2",
+    "vuedraggable": "^4.1.0",
+    "vuetify": "3.7.0"
+  }
+}
