@@ -53,3 +53,22 @@
   font-weight: 900;
   src: url(@/assets/fonts/Ravi/Ravi-ExtraBold.otf) format('opentype');
 }
+
+.my-list-item {
+  min-height: 33px !important;
+  font-size: 0.75rem !important;
+
+  .v-list-item-title{
+    font-size: 0.75rem !important;
+  }
+}
+
+.my-list-item .v-list-item__prepend i {
+  margin-inline-end: -20px !important;
+}
+
+.bg-login{
+  background-color: #2e3192;
+  opacity: 1;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #2e3192 25px ), repeating-linear-gradient( #16196a55, #16196a );
+}

@@ -437,6 +437,12 @@ const handleSelectPanel = () => {
 const handleSettings = () => {
   console.log("Opening Settings...");
 };
+
+const overlay = ref(false)
+const doSwitchPanel = () => {
+  overlay.value= true
+};
+
 </script>
 
 <template>
@@ -478,12 +484,48 @@ const handleSettings = () => {
           </v-btn>
 
           <v-spacer />
+          <v-btn
+            variant="text"
+            icon="mdi-switch"
+            size="small"
+            @click="doSwitchPanel()"
+          >
+          </v-btn>
+
+          <v-overlay v-model="overlay" class="align-center justify-center bg-indigo-darken-3" contained>
+            <v-row class="pa-8">
+              <v-col cols="12">
+                <v-card>
+                  <v-card-title class="d-flex align-center text-body-1 font-weight-bold">                  
+                    <img src="/logo-publish.svg" width="32" class="ml-4"/>
+                    نمایش
+                  </v-card-title>
+                </v-card>
+              </v-col>
+              <v-col cols="12">
+                <v-card>
+                  <v-card-title class="d-flex align-center text-body-1 font-weight-bold">                  
+                    <img src="/logo-mini.svg" width="32" class="ml-4"/>
+                    انتشار
+                  </v-card-title>
+                </v-card>
+              </v-col>
+              <v-col cols="12">
+                <v-card>
+                  <v-card-title class="d-flex align-center text-body-1 font-weight-bold">                  
+                    <img src="/logo-analytics.svg" width="32" class="ml-4"/>
+                   جمع آوری
+                  </v-card-title>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-overlay>
 
           <v-btn
             variant="text"
             icon="mdi-account-outline"
             size="small"
-            @click="doUpdateProfile(user.data)"
+            @click="doUpdateProfile({})"
           >
           </v-btn>
 
@@ -526,24 +568,29 @@ const handleSettings = () => {
         v-bind="props"
       ></v-btn>
     </template>
-                <v-list>
+                   
+              <v-list>
                   <v-list-item
+                    class="my-list-item"
                     title="پروفایل کاربری"
                     prepend-icon="mdi-account-circle-outline"
                     @click="handleProfile"
                   ></v-list-item>
                   <v-list-item
+                   class="my-list-item "
                     title="انتخاب پنل"
                     prepend-icon="mdi-inbox-outline"
                     @click="handleSelectPanel"
                   ></v-list-item>
                   <v-list-item
+                   class="my-list-item "
                     title="تنظیمات"
                     prepend-icon="mdi-cog-outline"
                     @click="handleSettings"
                   ></v-list-item>
                   <v-divider/>
                   <v-list-item
+                   class="my-list-item "
                     title="خروج از برنامه"
                     prepend-icon="mdi-exit-to-app"
                     @click="handleExit"
@@ -586,4 +633,5 @@ const handleSettings = () => {
     padding: 5px;
   }
 }
+
 </style>
