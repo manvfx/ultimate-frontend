@@ -21,9 +21,17 @@ const groups = [
       {
         icon: 'mdi-chart-box-outline',
         name: 'پیشخوان',
-        pathName: 'admin.dashboard'
-      }
-    ]
+        pathName: 'admin.dashboard',
+      },
+      {
+        icon: 'mdi-help-box',
+        name: 'راهنماها',
+      },
+      {
+        icon: 'mdi-server-security',
+        name: 'تنظیمات خانه Api',
+      },
+    ],
   },
   {
     icon: 'mdi-account-group-outline',
@@ -32,50 +40,32 @@ const groups = [
       {
         icon: 'mdi-account-outline',
         name: 'مدیریت کاربران',
-        pathName: 'panel.users'
-      },  
+      },
       {
         icon: 'mdi-shield-account-outline',
-        name: 'نقش ها',
-        pathName: 'panel.roles'
+        name: 'نقش‌ها',
       },
       {
         icon: 'mdi-shield-lock-outline',
-        name: 'مجوز ها',
-        pathName: 'panel.permissions'
+        name: 'مجوز‌ها',
       },
       {
         icon: 'mdi-select-group',
-        name: 'گروه ها',
-        pathName: 'panel.groups'
-      },      
-    ]
-  },
-  {
-    icon: 'mdi-cog-outline',
-    name: 'System',
-    children: [
-      {
-        icon: 'mdi-office-building-outline',
-        name: 'ملک ها',
-        pathName: 'panel.property'
+        name: 'گروه‌ها',
       },
       {
-        icon: 'mdi-file-cabinet',
-        name: 'ارزیابی ها',
-        pathName: 'panel.evaluation'
+        icon: 'mdi-account-question',
+        name: 'شرایط',
       },
       {
-        icon: 'mdi-shape-outline',
-        name: 'دسته بندی ها',
-        pathName: 'panel.category'
+        icon: 'mdi-file-question',
+        name: 'فرم شرایط',
       },
       {
-        icon: 'mdi-form-textbox',
-        name: 'بانک سوالات',
-        pathName: 'panel.question.list'
+        icon: 'mdi-file-clock',
+        name: 'تایید فرم شرایط',
       },
-    ]
+    ],
   },
   {
     icon: 'mdi-bank-outline',
@@ -83,11 +73,225 @@ const groups = [
     children: [
       {
         icon: 'mdi-receipt-text',
-        name: 'تراکنش ها',
+        name: 'تراکنش‌ها',
       },
-    ]
+      {
+        icon: 'mdi-transfer',
+        name: 'مدیریت انتقال‌ها',
+      },
+      {
+        icon: 'mdi-cash',
+        name: 'مدیریت تراکنش‌ها',
+      },
+      {
+        icon: 'mdi-bank',
+        name: 'مدیریت حساب‌ها',
+      },
+    ],
   },
-]
+  {
+    icon: 'mdi-file-outline',
+    name: 'Data',
+    children: [
+      {
+        icon: 'mdi-database-plus',
+        name: 'انتشار داده از دیتابیس',
+      },
+      {
+        icon: 'mdi-wizard-hat',
+        name: 'انتشار داده از سرویس',
+      },
+      {
+        icon: 'mdi-shape',
+        name: 'دسته‌بندی‌های داده',
+        permissions: ['admin.data-category.list'],
+      },
+      {
+        icon: 'mdi-file-tree',
+        name: 'درخت دسته‌بندی‌ها',
+      },
+      {
+        icon: 'mdi-file',
+        name: 'داده‌ها',
+      },
+      {
+        icon: 'mdi-clock',
+        name: 'تگ‌های زمانی',
+      },
+      {
+        icon: 'mdi-shape-outline',
+        name: 'انواع داده',
+      },
+      {
+        icon: 'mdi-account',
+        name: 'انتشار دهنده‌ها',
+      },
+      {
+        icon: 'mdi-database-clock',
+        name: 'درخواست‌های داده',
+      },
+      {
+        icon: 'mdi-database-edit',
+        name: 'مجوزهای داده',
+      },
+    ],
+  },
+  {
+    icon: 'mdi-server-outline',
+    name: 'API Management',
+    children: [
+      {
+        icon: 'mdi-web-plus',
+        name: 'انتشار Api موجود',
+      },
+      {
+        icon: 'mdi-web-sync',
+        name: 'انتشار Api جدید',
+      },
+      {
+        icon: 'mdi-server-network',
+        name: 'واحد‌های Api',
+      },
+      {
+        icon: 'mdi-tag-text',
+        name: 'نسخه‌های Api',
+      },
+      {
+        icon: 'mdi-play-circle',
+        name: 'اجراکننده Api',
+      },
+      {
+        icon: 'mdi-history',
+        name: 'لاگ اجرای Api',
+      },
+      {
+        icon: 'mdi-note-text',
+        name: 'مجوزهای Api',
+      },
+      {
+        icon: 'mdi-clipboard-list',
+        name: 'سیاست‌های Api',
+      },
+      {
+        icon: 'mdi-link-lock',
+        name: 'تحویل‌گیرنده‌ها',
+      },
+      {
+        icon: 'mdi-file-tree',
+        name: 'درخت تحویل‌گیرنده‌ها',
+      },
+      {
+        icon: 'mdi-chart-bar',
+        name: 'ایجاد Api از گزارش',
+      },
+      {
+        icon: 'mdi-star',
+        name: 'درخواست‌های Api',
+      },
+      {
+        icon: 'mdi-file',
+        name: 'درخواست‌های ایجاد Api',
+      },
+    ],
+  },
+  {
+    icon: 'mdi-chart-line',
+    name: 'Reports',
+    children: [
+      {
+        icon: 'mdi-account-group',
+        name: 'کاربران',
+      },
+      {
+        icon: 'mdi-ticket-confirmation',
+        name: 'فراخوانی‌های Api',
+      },
+      {
+        icon: 'mdi-server-network',
+        name: 'Api انتشار یافته',
+      },
+      {
+        icon: 'mdi-tag-text',
+        name: 'وضعیت انتشار هر Api',
+      },
+      {
+        icon: 'mdi-note-text',
+        name: 'مجوزهای هر Api',
+      },
+      {
+        icon: 'mdi-star',
+        name: 'درخواست‌های Api',
+      },
+      {
+        icon: 'mdi-file',
+        name: 'درخواست‌های ایجاد Api',
+      },
+      {
+        icon: 'mdi-transfer',
+        name: 'انتقال‌ها',
+      },
+      {
+        icon: 'mdi-file-account',
+        name: 'گزارش لاگ‌ها',
+      },
+      {
+        icon: 'mdi-face-agent',
+        name: 'تیکت‌های عمومی',
+      },
+      {
+        icon: 'mdi-ticket-confirmation',
+        name: 'تیکت‌های Api',
+      },
+      {
+        icon: 'mdi-file',
+        name: 'گزارش داده‌ها',
+      },
+      {
+        icon: 'mdi-shape',
+        name: 'دسته‌بندی‌های داده',
+      },
+    ],
+  },
+  {
+    icon: 'mdi-cog-outline',
+    name: 'Management',
+    children: [
+      {
+        icon: 'mdi-account-group',
+        name: 'مدیریت کاربران',
+      },
+      {
+        icon: 'mdi-account-box-multiple',
+        name: 'مدیریت نقش‌ها',
+      },
+      {
+        icon: 'mdi-list-box',
+        name: 'دسته‌بندی‌های تیکت‌ها',
+      },
+      {
+        icon: 'mdi-face-agent',
+        name: 'تیکت‌های پشتیبانی',
+      },
+      {
+        icon: 'mdi-view-list',
+        name: 'دسته‌بندی‌های تیکت‌های Api',
+      },
+      {
+        icon: 'mdi-ticket-confirmation',
+        name: 'تیکت‌های پشتیبانی Api',
+      },
+      {
+        icon: 'mdi-file-account',
+        name: 'مدیریت لاگ‌ها',
+      },
+      {
+        icon: 'mdi-chart-arc',
+        name: 'مشاهده آمار',
+      },
+    ],
+  },
+];
+
 
 const selectedGroup = computed(() =>
   groups.find(it => it.name === selectedGroupName.value)
@@ -217,43 +421,60 @@ const computedStyles = computed(() => {
 
   return baseStyles
 })
+
+const handleProfile = () => {
+  console.log("Navigating to Profile...");
+};
+
+const handleExit = () => {
+  console.log("Logging out...");
+};
+
+const handleSelectPanel = () => {
+  console.log("Selecting a Panel...");
+};
+
+const handleSettings = () => {
+  console.log("Opening Settings...");
+};
 </script>
 
 <template>
   <v-navigation-drawer
     permanent
+    elevation="2"
     :model-value="true"
-    :width="drawerVisible === 'full' ? '280' : '60'"
+    :width="drawerVisible === 'full' ? '300' : '60'"
   >
     <div class="fill-height d-flex flex-column">
-      <v-card
-        v-if="drawerVisible !== 'full'"
-        class="ma-2 flex-grow-0 d-flex align-center py-1 px-2"
-        flat
-      >
-        <v-img src="/logo-mini.svg" class="flex-grow-0" width="64" />
-      </v-card>
-
       <div
         class="flex-grow-1 d-flex flex-row"
-        style="height: 0; border-top: 1px solid rgba(0, 0, 0, 0.175)"
+        style="height: 0"
       >
         <div
           class="flex-grow-0 fill-height d-flex flex-column"
           :style="computedStyles"
         >
+        <v-card
+        class="flex-grow-0 d-flex align-center mr-2 py-3"
+        flat
+      >
+        <v-img src="/logo-mini.svg" class="flex-grow-0" width="34" />
+      </v-card>
           <v-btn
             v-for="group of groups"
             :key="group.name"
-            :variant="group.name === previewingGroupName ? 'outlined' : 'text'"
+            :variant="group.name === previewingGroupName ? 'tonal' : 'text'"
             min-width="0"
             width="45"
             height="45"
+            size="small"
             :title="group.name"
             :active="group.name === selectedGroupName"
             @click="previewingGroupName = group.name"
+            :color="group.name === previewingGroupName ? 'primary' : 'grey-darken-3'"
+            :icon="group.icon"
           >
-            <v-icon :icon="group.icon"/>
           </v-btn>
 
           <v-spacer />
@@ -289,6 +510,48 @@ const computedStyles = computed(() => {
           style="padding: 6px"
           v-if="drawerVisible === 'full'"
         >
+        <v-list-item
+            prepend-avatar="https://cdn.vuetifyjs.com/images/john.png"
+            subtitle="مدیر سیستم"
+            title="محمد امین نجفی"
+            class="bg-grey-lighten- mb-2"
+          >
+            <template v-slot:append>
+              <v-menu>
+    <template v-slot:activator="{ props }">
+      <v-btn
+        variant="text"
+        icon="mdi-dots-vertical"
+        size="small"
+        v-bind="props"
+      ></v-btn>
+    </template>
+                <v-list>
+                  <v-list-item
+                    title="پروفایل کاربری"
+                    prepend-icon="mdi-account-circle-outline"
+                    @click="handleProfile"
+                  ></v-list-item>
+                  <v-list-item
+                    title="انتخاب پنل"
+                    prepend-icon="mdi-inbox-outline"
+                    @click="handleSelectPanel"
+                  ></v-list-item>
+                  <v-list-item
+                    title="تنظیمات"
+                    prepend-icon="mdi-cog-outline"
+                    @click="handleSettings"
+                  ></v-list-item>
+                  <v-divider/>
+                  <v-list-item
+                    title="خروج از برنامه"
+                    prepend-icon="mdi-exit-to-app"
+                    @click="handleExit"
+                  ></v-list-item>
+                </v-list>
+              </v-menu>
+            </template>
+          </v-list-item>
           <v-list-item
             v-for="child of visibleGroup.children"
             :key="child.name"
@@ -303,21 +566,6 @@ const computedStyles = computed(() => {
               // previewingGroupName = ''
             "
           />
-          <div class="flex-grow-1"></div>
-          <v-list-item
-            prepend-avatar="https://cdn.vuetifyjs.com/images/john.png"
-            subtitle="مدیر سیستم"
-            title="محمد امین نجفی"
-            class="border bg-white"
-          >
-            <template v-slot:append>
-              <v-btn
-                icon="mdi-cog-outline"
-                size="small"
-                variant="text"
-              ></v-btn>
-            </template>
-          </v-list-item>
         </v-list>
       </div>
     </div>
@@ -326,7 +574,7 @@ const computedStyles = computed(() => {
 
 <style lang="scss" scoped>
 .sidebar-nav-child :deep(.v-icon) {
-  margin-inline-end: 12px;
+  margin-inline-end: -12px;
   font-size: 1.2em;
 }
 
