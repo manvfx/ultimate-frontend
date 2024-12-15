@@ -28,6 +28,6 @@ useHead({
 .bg-login{
   background-color: #2e3192;
   opacity: 1;
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #2e3192 25px ), repeating-linear-gradient( #16196a55, #16196a );
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #2e3192 25px ), repeating-linear-gradient( #16196a55, #2e3192 );
 }
 </style>

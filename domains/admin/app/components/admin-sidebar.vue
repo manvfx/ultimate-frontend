@@ -486,14 +486,17 @@ const doSwitchPanel = () => {
           <v-spacer />
           <v-btn
             variant="text"
-            icon="mdi-switch"
+            icon="mdi-toggle-switch-outline"
             size="small"
             @click="doSwitchPanel()"
           >
           </v-btn>
 
-          <v-overlay v-model="overlay" class="align-center justify-center bg-indigo-darken-3" contained>
+          <v-overlay v-model="overlay" class="align-end justify-center bg-indigo-darken-3 bg-sidebar" contained>
             <v-row class="pa-8">
+              <v-col cols="12">
+                <div>پنل مورد نظر خود را انتخاب کنید</div>
+              </v-col>
               <v-col cols="12">
                 <v-card>
                   <v-card-title class="d-flex align-center text-body-1 font-weight-bold">                  
@@ -633,5 +636,11 @@ const doSwitchPanel = () => {
     padding: 5px;
   }
 }
-
+.bg-sidebar {
+  background-color: #2e3192;
+  opacity: 1;
+  background-image: 
+    repeating-radial-gradient(circle at 100% 100%, transparent 0, #2e3192 25px), 
+    repeating-linear-gradient(#16196a55, #2e3192);
+}
 </style>
